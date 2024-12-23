@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Info System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- jQuery UI CSS for Autocomplete -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Info System</h1>
+        <form id="flight-form">
+            <input type="text" id="flight-number" name="flight_number" placeholder="Flight Number" required>
+            <input type="date" id="departure-date" name="departure_date" required>
+            <input type="text" id="departure-place" name="departure_place" placeholder="Departure Place" required>
+            <input type="text" id="arrival-place" name="arrival_place" placeholder="Arrival Place" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="flight-details" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Airline</th>
+                        <th>Airplane</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Ranking</th>
+                        <th>Predicted Arrival Delay</th>
+                        <th>Predicted Flight Delay</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="td-flight-number"></td>
+                        <td id="td-airline"></td>
+                        <td id="td-airplane"></td>
+                        <td id="td-departure-time"></td>
+                        <td id="td-arrival-time"></td>
+                        <td id="td-origin"></td>
+                        <td id="td-destination"></td>
+                        <td id="td-ranking"></td>
+                        <td id="td-arrival-delay"></td>
+                        <td id="td-flight-delay"></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- jQuery and jQuery UI for Autocomplete -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
