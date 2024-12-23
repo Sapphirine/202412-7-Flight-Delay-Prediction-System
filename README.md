@@ -12,6 +12,12 @@ Powered by machine learning, this system achieves an **R² score of 80%**, expla
 
 ---
 
+## Demo Video
+
+Watch our project in action: [Flight Delay Prediction System Demo](https://www.youtube.com/watch?v=QL-LUiSQqKY)
+
+---
+
 ## Features
 
 - **Flight Delay Prediction**: Input flight details to predict arrival delay and reliability.
